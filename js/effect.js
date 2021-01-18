@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    //影片寬度設定
+    var VideoWidth = $('.video iframe').width();
+    $('.video iframe').height(VideoWidth*0.5625);
+    $(window).resize(function () {
+        var VideoWidth = $('.video iframe').width();
+        $('.video iframe').height(VideoWidth*0.5625);
+    });
     //頁籤功能----------
     //按鈕切換樣式
     $('.books-area-tab-btn').click(function (e) {
@@ -135,12 +142,12 @@ $(document).ready(function () {
         var BooksAreaPosition = $('.books-area').offset().top;
         var BooksTabHeight = $('.books-area-tab').height();
         //頁籤功能定位
-        if ( WindowWidth <= 480 && WindowScrollTop >= BooksAreaPosition - BooksTabHeight) {
-            $('.books-area-tab').css({'width':'100%','position':'fixed','top':'0', 'right':'0', 'bottom':'none', 'left':'0'});
+        if (WindowWidth <= 480 && WindowScrollTop >= BooksAreaPosition - BooksTabHeight) {
+            $('.books-area-tab').css({ 'width': '100%', 'position': 'fixed', 'top': '0', 'right': '0', 'bottom': 'none', 'left': '0' });
         } else {
-            $('.books-area-tab').css('position','relative');
+            $('.books-area-tab').css('position', 'relative');
         }
-        
+
     });
     //各區塊連結按鈕功能
     $('.content-link a').not('.content-area-link').click(function (e) {

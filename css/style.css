@@ -3648,9 +3648,9 @@ header div {
   margin-bottom: 5%;
 }
 
-.video video {
-  padding-top: 5%;
-  padding-bottom: 5%;
+.video iframe {
+  margin-left: 0;
+  margin-right: auto;
   width: 100%;
 }
 
@@ -4028,6 +4028,22 @@ footer p:last-child {
 .content-link .content-area-link {
   color: whitesmoke;
   background-color: #ec8123;
+}
+
+@media (max-width: 1440px) {
+  .books-content {
+    width: 700px;
+  }
+  .books-content .books-content-infor .books-content-infor-img {
+    width: 25%;
+  }
+  .books-content .books-content-infor .books-content-infor-content h3 {
+    font-size: 1.5rem;
+  }
+  .books-content .books-content-infor .books-content-infor-content article {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {

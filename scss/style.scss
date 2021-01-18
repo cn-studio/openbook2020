@@ -82,8 +82,8 @@ header{
 //影片----------
 .video{
     @include m-y(5%, 5%);
-    video{
-        @include p-y(5%, 5%);
+    iframe{
+        @include m-x(0, auto);
         width: 100%;
     }
 }
@@ -340,7 +340,25 @@ $size: 60px;
         background-color: $brand-color;
     }
 }
-
+@include desktop-m{
+    .books-content{
+        width: 700px;
+        .books-content-infor{
+            .books-content-infor-img{
+                width: 25%;
+            }
+            .books-content-infor-content{
+                h3{
+                    font-size: 1.5rem;
+                }
+                article{
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
 @include ipad{
     header{
         .header-infor{
